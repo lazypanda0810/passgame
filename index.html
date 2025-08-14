@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Impossible Password Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 The Impossible Password Game</h1>
+            <p>Create a password that meets all requirements... if you can!</p>
+        </div>
+
+        <div class="password-section">
+            <label for="password">Enter your password:</label>
+            <input type="text" id="password" placeholder="Start typing your password..." autocomplete="off">
+            <div class="password-strength">
+                <div class="strength-bar" id="strengthBar"></div>
+            </div>
+        </div>
+
+        <div class="rules-container">
+            <h2>Password Requirements:</h2>
+            <div id="rules-list"></div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-info">
+                <span>Rules Satisfied: <span id="satisfied-count">0</span>/<span id="total-count">0</span></span>
+                <span>Impossibility Level: <span id="impossibility-level">Beginner</span></span>
+            </div>
+        </div>
+
+        <div class="game-status" id="game-status">
+            <p>Start typing to see the rules appear...</p>
+        </div>
+
+        <button id="submit-btn" disabled>Submit Password</button>
+
+        <div class="easter-egg" id="easter-egg" style="display: none;">
+            <h3>🎉 Congratulations!</h3>
+            <p>You've achieved the impossible! But wait... there's one more rule...</p>
+        </div>
+    </div>
+
+    <div class="modal" id="victory-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>🏆 Victory!</h2>
+            <p>You have successfully created the perfect password!</p>
+            <p>Just kidding... nobody ever wins this game. 😈</p>
+            <button onclick="restartGame()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
